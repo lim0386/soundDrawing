@@ -86,14 +86,30 @@ void draw() {
   bpmFloat = 60000000/speed; //How fast is this Music?
   
   println(lDurFloat, lBpmFloat, durFloat, bpmFloat);
-  //line(lDurFloat2, -1*lBpmFloat+(height/1.3), durFloat, -1*bpmFloat+(height/1.3));
-  line(lDurFloat, -1*lBpmFloat+(height/1.3), durFloat, -1*lBpmFloat+(height/1.3));
-  line(lDurFloat2, -1*lBpmFloat+(height/1.3), lDurFloat2, -1*bpmFloat+(height/1.3));
-  //rect(x, y, width, height);
+ 
+ //If I use line.
+  //strokeWeight(1);
+  //stroke(255); 
+  //line(lDurFloat2, -1*lBpmFloat+(height/1.3), durFloat, -1*lBpmFloat+(height/1.3));
+  //line(durFloat, -1*lBpmFloat+(height/1.3), durFloat, -1*bpmFloat+(height/1.3));
+
+ //If I use Vertex.
+  //beginShape();
+  
+  //vertex(lDurFloat2, -1*lBpmFloat+(height/1.3));
+  //vertex(durFloat, -1*lBpmFloat+(height/1.3));
+  //vertex(durFloat, -1*bpmFloat+(height/1.3));
+
+  //endShape();
+  
+  //If I use shape.
+  fill(0);
+  //rect(lDurFloat2, -1*lBpmFloat+(height/1.3), durFloat-lDurFloat2,-1*lBpmFloat+(height/1.3)+-1*lBpmFloat+(height/1.3));
+    rect(lDurFloat2, -1*lBpmFloat+(height/1.3), durFloat-lDurFloat2,100-1*lBpmFloat+(height/1.3));
+
   
   lBpmFloat = bpmFloat;
   lDurFloat = durFloat;
   lDurFloat2 = lDurFloat;
   
-  //line(lDurFloat, lBpmFloat, durFloat, bpmFloat);
 }
